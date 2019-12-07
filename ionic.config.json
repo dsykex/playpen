@@ -1,0 +1,7 @@
+{
+  "name": "ppen",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
