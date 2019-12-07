@@ -7,16 +7,21 @@ import {GoogleNearby} from '@ionic-native/google-nearby/ngx'
 })
 export class HomePage implements OnInit {
   public nearby: any;
+  public error: any;
 
-  constructor(private googleNearby: GoogleNearby) { }
+  constructor(private googleNearby: GoogleNearby) {
 
-    ngOnInit()
-    {
-      this.googleNearby.publish('Hello')
-        .then((res: any) => console.log(res))
-        .catch((error: any) => console.error(error));
-      
-      this.googleNearby.subscribe()
-        .subscribe((res: any) => console.log(res), error => console.log(error), () => {});
-    }
+  }
+
+  ngOnInit()
+  {
+    this.googleNearby.publish('Hello')
+      .then((res: any) => console.log(res))
+      .catch((error: any) => {
+        this.error = error;
+      });
+    
+    this.googleNearby.subscribe()
+      .subscribe((res: any) => console.log(res), error => console.log(error), () => {});
+  }
 }
