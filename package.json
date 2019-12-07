@@ -27,6 +27,7 @@
     "cordova-android": "8.1.0",
     "cordova-plugin-google-nearby": "^1.1.6",
     "core-js": "^2.5.4",
+    "firebase": "^7.5.2",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -66,9 +67,7 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "cordova-plugin-google-nearby": {
-        "API_KEY": "AIzaSyBIfoTaw4xz3jZ410hWbTqPZg_IkzQ6rPk"
-      },
+      "cordova-plugin-google-nearby": {},
       "cordova-plugin-whitelist": {},
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
