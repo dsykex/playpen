@@ -1,7 +1,7 @@
 {
-  "name": "ppen",
+  "name": "Playpen",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Sykes Creatives",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
@@ -28,6 +28,7 @@
     "cordova-plugin-google-nearby": "^1.1.6",
     "core-js": "^2.5.4",
     "firebase": "^7.5.2",
+    "gsap": "^3.0.2",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -64,7 +65,7 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project",
+  "description": "A content management system for creating your own mobile experience.",
   "cordova": {
     "plugins": {
       "cordova-plugin-google-nearby": {},

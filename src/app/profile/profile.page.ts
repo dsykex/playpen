@@ -4,26 +4,26 @@ import * as firebase from '../firebase';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-landing',
-  templateUrl: './landing.page.html',
-  styleUrls: ['./landing.page.scss'],
+  selector: 'app-profile',
+  templateUrl: './profile.page.html',
+  styleUrls: ['./profile.page.scss'],
 })
-export class LandingPage implements OnInit {
+export class ProfilePage implements OnInit {
 
+  user: any = {};
   constructor(public authService: AuthService, public router: Router) { }
 
   ngOnInit() {
     this.authService.getUserInfo().then(userInfo => {
-      console.log(userInfo);
-      if(userInfo)
-      {
-        this.router.navigateByUrl('/profile');
-      }
+      if(!userInfo)
+        this.router.navigateByUrl('/')
       else
-      {
-        this.router.navigateByUrl('/login');
-      }
+        this.user = userInfo;
     })
+    
+    //TODO
+
   }
 
+  
 }

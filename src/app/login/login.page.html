@@ -1,9 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div class="middle">
+    <div class="login">
+        <img class="logo" src="../../assets/logo.png" alt="" width="110" height="90"/>
+        <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input></ion-input>
+        </ion-item>  
+        <ion-item>
+            <ion-label position="floating" type="password">Password</ion-label>
+            <ion-input></ion-input>
+        </ion-item>  
+        <ion-button (click)="login()" size="full" color="secondary">Login</ion-button>
+        <a class="create-account" (click)="signup()">Create an account</a>
+        <p class="error">{{error}}</p>
+    </div>
+  </div>
+  <div class="bg"></div>
 </ion-content>
